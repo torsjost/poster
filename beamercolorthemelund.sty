@@ -1,0 +1,53 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/color/beamercolorthemelund.sty,v 1.9 2007/01/28 20:48:24 tantau Exp $
+
+
+\mode<presentation>
+
+\definecolor{lundblue}{RGB}{0,0,128}
+\definecolor{lundbrown}{RGB}{153,102,51}
+\definecolor{lundorange}{RGB}{233,131,0}
+\definecolor{lundred}{RGB}{152,30,50}
+\definecolor{lundlightgray}{RGB}{203,199,191}
+\definecolor{lundgray}{RGB}{146,139,129}
+\definecolor{lundlightblue}{RGB}{189,203,197}
+\definecolor{lundgreen}{RGB}{85,118,48}
+\definecolor{lundlightgreen}{RGB}{199,210,138}
+
+\setbeamercolor{structure}{fg=lundblue}
+
+\setbeamercolor{palette primary}{fg=lundlightgray!70,bg=lundbrown}
+\setbeamercolor{palette secondary}{fg=lundlightgray!70,bg=lundgreen}
+\setbeamercolor{palette tertiary}{fg=lundlightgray!70,bg=lundblue}
+\setbeamercolor{palette quaternary}{fg=lundlightgray!50,bg=lundblue}
+
+\setbeamercolor{titlelike}{parent=palette quaternary}
+
+\setbeamercolor{block title}{fg=lundlightgray!50,bg=lundblue}
+\setbeamercolor{block title alerted}{use=alerted text,fg=lundblue,bg=alerted text.fg!75!bg}
+\setbeamercolor{block title example}{fg=lundlightgray!50,bg=lundgreen}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!25!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!25!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!25!bg}
+
+\setbeamercolor{sidebar}{bg=lundlightblue}
+
+\setbeamercolor{palette sidebar primary}{fg=lundblue}
+\setbeamercolor{palette sidebar secondary}{fg=lundblue}
+\setbeamercolor{palette sidebar tertiary}{fg=lundblue}
+\setbeamercolor{palette sidebar quaternary}{fg=lundblue}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>

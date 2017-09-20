@@ -1,0 +1,254 @@
+\ProvidesPackage{theme/beamerthemelund}  % this style was created by Liney Halla Kristinsdottir, based on the I6pd2 style by Thomas Deselaers an Philippe Dreuw, modified 20131001 by Gunnar Eriksson
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONT SETUP
+\usepackage{xltxtra}
+\usepackage{fontspec}
+% Choose an otf-font - xelatex only!!!
+% \setromanfont{Adobe Garamond Pro}  % Doesn't work :( - but works with Frutiger!!! sth wrong with the Garamond otf-files?
+% \fontspec[BoldFont=[AGaramondPro-Semibold.otf],ItalicFont=[AGaramondPro-Italic.otf]]{[AGaramondPro-Regular.otf]}  % doesn't work either...
+\setromanfont{[AGaramondPro-Regular.otf]}  % Works, but no bold and italic with textbf & textit
+\newfontfamily\mybffont{[AGaramondPro-Semibold.otf]}
+\newfontfamily\myitfont{[AGaramondPro-Italic.otf]}
+\setsansfont{Frutiger LT Std}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Make a folder 'theme', linking to the folder /nfs/users2/liney/LaTeX/LU/
+\newcommand{\authorFig}{\includegraphics[width=\linewidth]{theme/figs/LHK_BW.jpg}}
+\newcommand{\universityLogo}{\includegraphics[width=\linewidth]{theme/figs/LundUniversity_C2line_CMYK.png}}
+\newcommand{\footerLeft}{}%Text set by the command \verb#\footerLeft#}
+\newcommand{\footerRight}{}%Text set by the command \verb#\footerRight#}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{lundblue}{cmyk}{1,0.85,0.05,0.22} % 100,85,5,22
+\definecolor{lundbrown}{cmyk}{0.09,0.57,1,0.41} % 9,57,100,41
+\definecolor{lundpink}{cmyk}{0,0.15,0.05,0} % 0,15,5,0
+\definecolor{lundlightblue}{cmyk}{0.24,0.03,0.07,0.02} % 24,3,7,2
+\definecolor{lundlightgreen}{cmyk}{0.29,0.02,0.24,0.03} % 29,2,24,3
+\definecolor{lundlightgray}{cmyk}{0.09,0.11,0.13,0.2} % 9,11,13,20
+\definecolor{lundgray}{cmyk}{0,0,0.15,0.85} % 0,0,15,85
+\definecolor{lundbeige}{cmyk}{0.03,0.04,0.14,0.08} % 3,4,14,8
+\definecolor{lundgreentransp}{cmyk}{0.051,0,0.03,0.075} % 5.1,0,3,7.5
+\definecolor{lundredtransp}{cmyk}{0,0.047,0.039,0.004} % 0,4.7,3.9,0.4 - 50% transparent
+
+% \definecolor{lundblue}{RGB}{0,0,128}
+% \definecolor{lundbrown}{RGB}{156,97,20}
+% \definecolor{lundorange}{RGB}{233,131,0}
+% \definecolor{lundred}{RGB}{233,196,199} 
+% \definecolor{lundredtransp}{RGB}{254,242,244} % 50% transparent
+% \definecolor{lundlightgray}{RGB}{214,210,196}
+% \definecolor{lundgray}{RGB}{191,184,175}
+% \definecolor{lundlightblue}{RGB}{185,211,220}
+% \definecolor{lundgreen}{RGB}{173,202,184}
+% \definecolor{lundgreentransp}{RGB}{224,236,229}
+% \definecolor{lundlightgreen}{RGB}{199,210,138}
+
+\setbeamercolor{structure}{fg=black}
+
+\setbeamercolor{palette primary}{fg=lundlightgray!70,bg=lundbrown}
+\setbeamercolor{palette secondary}{fg=lundlightgray!70,bg=lundblue}
+\setbeamercolor{palette tertiary}{fg=lundlightgray!70,bg=lundblue}
+\setbeamercolor{palette quaternary}{fg=lundlightgray!50,bg=lundblue}
+
+\setbeamercolor{titlelike}{parent=palette quaternary}
+
+\setbeamercolor{block title}{fg=lundbrown,bg=white}
+%\setbeamercolor{block title}{fg=lundlightgray!50,bg=lundblue}
+\setbeamerfont{block title}{size=\LARGE,family=\mybffont}
+% \setbeamercolor{block title alerted}{use=alerted text,fg=lundblue,bg=alerted text.fg!75!bg}
+\setbeamercolor{block title alerted}{use=alerted text,fg=lundbrown,bg=lundpink!50}
+\setbeamercolor{block title example}{fg=lundbrown,bg=lundlightgreen!50}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=white}%lundorange!50!white}%lundgreen!25!white}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=lundpink!50}%block title alerted.bg!25!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=lundlightgreen!50}%=block title example.bg!25!bg}
+
+\setbeamercolor{sidebar}{bg=lundlightblue}
+
+\setbeamercolor{palette sidebar primary}{fg=lundblue}
+\setbeamercolor{palette sidebar secondary}{fg=lundblue}
+\setbeamercolor{palette sidebar tertiary}{fg=lundblue}
+\setbeamercolor{palette sidebar quaternary}{fg=lundblue}
+
+\setbeamercolor{separation line}{bg=lundbrown}
+\setbeamercolor{fine separation line}{bg=lundbrown}
+% ------------------------
+\setbeamercolor{headline}{fg=lundlightgreen,bg=white}
+\setbeamercolor{footline}{fg=lundbrown, bg=lundbrown}
+\setbeamerfont{footline}{size=\large}
+\setbeamercolor{title in headline}{fg=lundbrown}
+\setbeamercolor{author in headline}{fg=lundbrown}
+\setbeamercolor{institute in headline}{fg=lundbrown}
+
+\setbeamercolor{framesubtitle}{fg=lundlightgreen, bg=lundbrown}
+\setbeamercolor{author in head/foot}{fg=lundbrown, bg=white}
+\setbeamercolor{title in head/foot}{fg=lundbrown, bg=white}
+
+\setbeamercolor*{normal text}{fg=black, bg=white}
+\setbeamercolor{upper separation line head}{fg=lundbrown}
+
+\setbeamercolor*{example body}{fg=lundblue,bg=lundlightblue}
+\setbeamercolor*{example text}{fg=black,bg=lundlightblue}
+\setbeamercolor*{example title}{bg=lundblue,fg=lundlightblue}
+\setbeamerfont{example title}{size=\large,series=\bfseries}
+
+%\setbeamercolor{alerted text}{fg=ta3gray}
+
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setbeamertemplate{blocks}[rounded][shadow=true]
+\addtobeamertemplate{block begin}{\vskip.75ex}{{\color{lundbrown}\hrule}\vskip0.5em}
+\addtobeamertemplate{block alerted begin}{\vskip.75ex}{{\color{lundbrown}\hrule}\vskip0.5em}
+\addtobeamertemplate{block example begin}{\vskip.75ex}{{\color{lundbrown}\hrule}\vskip0.5em}
+% \setbeamertemplate{block begin}{
+%   \vskip.75ex
+%   \begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+%     \usebeamerfont*{block title}%
+%     {\vskip1ex\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
+%   \end{beamercolorbox}%
+%   {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+%   \usebeamerfont{block body}%
+%   \begin{beamercolorbox}[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+%     \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+%   }
+%   \setbeamertemplate{block end}{
+%   \end{beamercolorbox}
+% }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}
+    \begin{columns}[T]
+%       \begin{column}{.02\paperwidth}
+%         \begin{beamercolorbox}[wd=1.8\textwidth]{block body}
+%           \vskip14cm
+%         \end{beamercolorbox}
+%       \end{column}
+      \begin{column}{140mm}
+        \begin{beamercolorbox}[wd=\textwidth,ht=175mm]{block body}%         \vskip8ex
+        %\vskip10mm
+        \begin{center}%\authorFig
+%		\universityLogo
+		\hskip12mm
+		\includegraphics[]{theme/figs/LundUniversity_C2line_CMYK.png}
+        \end{center}%\vskip-1.1ex
+	\vskip9mm
+        \end{beamercolorbox}
+        
+      \end{column}
+      \begin{column}{701mm}
+        \vskip15mm
+        \vbox to 160mm{
+        \vfill
+        %\centering
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\huge{\inserttitle}}\\[1ex]}
+	\begin{beamercolorbox}[wd=580mm]{lower separation line head}
+		\rule{0pt}{3pt}
+	\end{beamercolorbox}
+	\vskip2em
+        \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}     
+        \vfill
+        }
+      \end{column}
+%       \begin{column}{.13\paperwidth}
+%         \begin{beamercolorbox}[wd=\textwidth,ht=14cm]{block body}
+% %         \vskip8ex
+%         \begin{center}
+%           
+%         \end{center}
+%         \vskip3ex
+%         \end{beamercolorbox}
+%       \end{column}
+%       \begin{column}{.02\paperwidth}
+%         \begin{beamercolorbox}[wd=1.8\textwidth]{block body}
+%           \vskip14cm
+%         \end{beamercolorbox}
+%       \end{column}
+    \end{columns}
+     \vskip13mm
+  \end{beamercolorbox}
+
+%   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+%     \rule{0pt}{3pt}
+%   \end{beamercolorbox}
+}
+
+%  \setbeamertemplate{headline}{  
+%    \leavevmode
+%    \begin{beamercolorbox}[sep=0.5cm,wd=.8\paperwidth]{headline}
+%      \usebeamercolor{title in headline}{\raggedleft\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%      \usebeamercolor{author in headline}{\raggedleft\color{fg}\large{\insertauthor}\\[1ex]}
+%      \usebeamercolor{institute in headline}{\raggedleft\color{fg}\large{\insertinstitute}\\[1ex]}     
+%    \end{beamercolorbox}%
+%    \begin{beamercolorbox}[wd=.2\paperwidth]{logo in headline}
+%      \centering
+%      \LARGE{LOGO}
+%    \end{beamercolorbox}  
+
+
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{0pt}{3pt}
+  \end{beamercolorbox}
+  
+  \leavevmode%
+  \begin{beamercolorbox}[ht=6ex,leftskip=15mm,rightskip=15mm]{author in head/foot}%
+%   \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
+    \normalsize
+    \footerLeft
+    \hfill
+    \footerRight
+    \vskip4ex
+  \end{beamercolorbox}
+  \vskip15mm%
+%   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+%     \rule{0pt}{3pt}
+%   \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images ... and it looks nice with this color scheme
+% \beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+% adapt height of itemize rectangles
+\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize item}{\raisebox{0.12ex}{$\blacktriangleright$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\triangleright$}\hskip0.1em}
+% or define your own template using \defbeamertemplate{itemize item}, see beameruserguide.pdf
+
+\addtobeamertemplate{itemize/enumerate body begin}{\vskip1ex\hspace*{0.025\textwidth}\begin{minipage}{0.95\textwidth}}{}
+\addtobeamertemplate{itemize/enumerate body end}{\end{minipage}}{}
+
+% equal font sizes for all levels
+\setbeamerfont{itemize/enumerate body}{size=\small}
+% \setbeamerfont{itemize/enumerate body}{size=\normalsize}
+% \setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+% \setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+
+% Number figures and tables
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption name}{series=\bfseries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster-surf"
+%%% End: 
